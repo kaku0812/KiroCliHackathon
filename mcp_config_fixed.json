@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "weather-service": {
+      "command": "python",
+      "args": [
+        "WEATHER_SERVER.PY"
+      ],
+      "cwd": "C:\\Users\\khchaudhary\\OneDrive - Microsoft\\Desktop\\WeatherMCP",
+      "env": {
+        "OPENWEATHER_API_KEY": "47875d49ee60cdf958dc3732baf14507"
+      },
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}

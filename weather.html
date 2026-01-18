@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Weather Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .weather-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .weather-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .weather-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .city-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .temperature {
+            font-size: 3rem;
+            font-weight: 300;
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .condition {
+            font-size: 1.2rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .detail-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .detail-label {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .weather-icon {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .timestamp {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .weather-card {
+                padding: 20px;
+            }
+            
+            .temperature {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ India Weather Dashboard</h1>
+        
+        <div class="weather-grid">
+            <div class="weather-card">
+                <div class="weather-icon">🌫️</div>
+                <div class="city-name">Hyderabad</div>
+                <div class="temperature">23°C</div>
+                <div class="condition">Haze</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Humidity</div>
+                        <div class="detail-value">46%</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Wind</div>
+                        <div class="detail-value">2.1 m/s</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather-card">
+                <div class="weather-icon">🌫️</div>
+                <div class="city-name">Delhi</div>
+                <div class="temperature">10°C</div>
+                <div class="condition">Haze</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Humidity</div>
+                        <div class="detail-value">66%</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Wind</div>
+                        <div class="detail-value">0 m/s</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather-card">
+                <div class="weather-icon">🌫️</div>
+                <div class="city-name">Bangalore</div>
+                <div class="temperature">19°C</div>
+                <div class="condition">Mist</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Humidity</div>
+                        <div class="detail-value">88%</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Wind</div>
+                        <div class="detail-value">8.9 m/s</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather-card">
+                <div class="weather-icon">💨</div>
+                <div class="city-name">Mumbai</div>
+                <div class="temperature">27°C</div>
+                <div class="condition">Smoke</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Humidity</div>
+                        <div class="detail-value">41%</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Wind</div>
+                        <div class="detail-value">2.6 m/s</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timestamp">
+            Last updated: Monday, January 12, 2026 at 4:22 PM UTC
+        </div>
+    </div>
+</body>
+</html>

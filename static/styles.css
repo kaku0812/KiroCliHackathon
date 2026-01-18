@@ -1,0 +1,28 @@
+body {
+  font-family: Inter, system-ui;
+  background: #f6f7fb;
+  padding: 24px;
+}
+
+#map {
+  height: 400px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.card h3 {
+  margin-top: 0;
+}

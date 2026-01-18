@@ -1,0 +1,19 @@
+# Virtual environments
+venv/
+venv_new/
+.venv/
+__pycache__/
+
+# Environment variables
+.env
+
+# Database files (keeping snapshots.db if it's important data)
+# *.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
